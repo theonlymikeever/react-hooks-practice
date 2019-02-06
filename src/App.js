@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import logo from './logo.svg';
 import './App.css';
 
@@ -30,6 +30,10 @@ const App = () => {
       });
     }
   };
+
+  useEffect(() => {
+    if (gameState.victory) document.title = 'Victory!'; // in a Dwight voice
+  })
 
   return (
     <div className="App">
